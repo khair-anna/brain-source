@@ -1,0 +1,110 @@
+%header-txt {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #FFFFFF;
+}
+
+%flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-logo{
+    padding: 21px 0 14px 135px;
+}
+
+.header-nav{
+    @extend%flex-row;
+    background-color: #2B88FF;
+    padding: 0 135px;
+    justify-content: space-between;
+    .header-list{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+    .header-item,.header-contact {
+        padding: 12px 30px;
+    }
+    .header-item:hover {
+        background-color: #0C5FC9;
+    }
+            
+    .header-item:first-child{
+        padding: 12px 30px 12px 0;
+    }
+    .header-lang{
+        @extend%flex-row;
+        padding: 12px 0 12px 30px;
+    }
+    .header-link, .header-lang__item{
+        text-decoration: none;
+        @extend%header-txt;
+    }
+    .header-contact{
+        @extend%header-txt;
+        font-weight: 700;
+    }
+}
+
+//DROPDOWN
+.header-item{
+    position: relative;
+    display: inline-block;
+}
+.header-dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: #FFFFFF;
+    min-width: 230px;
+    margin-top: 12px;
+    margin-left: -30px;
+}
+.header-dropdown__link {
+    @extend%header-txt;
+    color: #6B6B6B;
+    display: block;
+    text-decoration: none;
+    padding: 10px 27px;
+}
+
+.header-dropdown__link:hover {
+    background-color: #2A88FF;
+    color: #FFFFFF;
+}
+.header-item:hover .header-dropdown{
+    display: block;
+}
+
+// corporation
+.corporation {
+    background: url(../img/brain-source.jpg) no-repeat;
+    background-size: cover;
+    height: 550px;
+
+    .corporation__title {
+        color: #FFFFFF;
+        padding: 173px 0 21px 192px;
+    }
+
+    .corporation__text {
+        font-size: 16px;
+        color: #FFFFFF;
+        padding: 0 0 205px 192px;
+        max-width: 620px;
+    }
+
+    .corporation__elipse {
+        @extend%flex-row;
+        text-align: center;
+        gap: 12px;
+        margin-left: 50%;
+    }
+}

@@ -1,0 +1,202 @@
+%flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+//more
+.more {
+    margin-top: 100px;
+    margin-bottom: 111px;
+    @extend%flex-row;
+    gap: 40px;
+
+    .more__button {
+        width: 204px;
+        height: 56px;
+    }
+
+    .more__button_bcg_white {
+        background: #FFFFFF;
+        border: 1px solid #EB3D00;
+        font-weight: 400;
+        color: #EB3D00;
+    }
+
+    .more__button_bcg_orange {
+        background: #EB3D00;
+        border: 1px solid #EB3D00;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+
+    .more__button_bcg_shadow {
+        background: #EB3D00;
+        border: 1px solid #EB3D00;
+        box-shadow: inset 4px 4px 4px #AD3206;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+}
+
+//vacancies
+.vacancies {
+    margin-bottom: 90px;
+}
+
+.vacancies__header {
+    @extend%flex-row;
+    margin-bottom: 37px;
+    align-items: center;
+    gap: 400px;
+}
+
+.vacancies__body {
+    @extend%flex-row;
+    justify-content: space-between;
+    align-items: center;
+
+    .vacancies-content {
+        width: 24%;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 49px 2px rgba(0, 0, 0, 0.14);
+        border-radius: 0 5px 5px 0;
+        border-left: 3px solid #EB3D00;
+        padding: 41px 44px 32px 30px;
+
+        .vacancies-content__title {
+            padding-bottom: 14px;
+        }
+
+        .vacancies-content__text {
+            font-size: 12px;
+            color: #6B6B6B;
+            padding-bottom: 19px;
+        }
+    }
+}
+
+.vacancies__link_orange {
+    text-decoration: none;
+    color: #EB3D00;
+    border-bottom: 1px dashed #EB3D00;
+}
+
+.vacancies__link_blue {
+    text-decoration: none;
+    color: #2A88FF;
+    border-bottom: 1px dashed #2A88FF;
+}
+
+//test
+.test {
+    @extend%flex-row;
+    background: #2A88FF;
+    gap: 41px;
+    padding: 71px 0 71px 198px;
+    margin-bottom: 61px;
+
+    .test__button {
+        width: 237px;
+        height: 56px;
+        font-weight: 700;
+        color: #FFFFFF;
+        border: 0;
+    }
+
+    .test__button_bcg_darkorange {
+        background: #EB3D00;
+    }
+
+    .test__button_bcg_orange {
+        background: #F94A0C;
+    }
+
+    .test__button_bcg_shadow {
+        background: #F94A0C;
+        box-shadow: inset 4px 4px 4px #AD3206;
+    }
+}
+
+//question
+.question {
+    padding: 75px 59px 80px 475px;
+    margin-bottom: 38px;
+    background: #F9F9F9;
+    border: 3px solid #2B88FF;
+    border-radius: 10px;
+
+    .question__title {
+        text-align: center;
+        margin-bottom: 34px;
+    }
+
+    .question__form {
+        @extend%flex-row;
+        gap: 30px;
+
+        .question__input {
+            @extend%flex-column;
+            .input {
+                width: 338px;
+                background: #FFFFFF;
+                border: 1px solid #2B88FF;
+                border-radius: 5px;
+                padding: 16px 0 16px 23px;
+            }
+
+            .input-invalid {
+                display: none;
+                color: #EB3D00;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 1.51;
+                text-align: end;
+            }
+
+            .input:invalid {
+                border: 1px solid #EB3D00;
+            }
+
+            .input:valid {
+                border: 1px solid #01A011;
+            }
+
+            .label {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.51;
+                color: #000000;
+            }
+
+            .label__span {
+                color: #EB3D00;
+            }
+        }
+    }
+}
+
+//answer
+.answer {
+    background: #F9F9F9;
+    border: 3px solid #2B88FF;
+    border-radius: 10px;
+    padding: 105px 313px 101px 313px;
+    margin-bottom: 78px;
+
+    .answer-header {
+        @extend%flex-row;
+        gap: 22px;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .answer__text {
+        text-align: center;
+    }
+}
