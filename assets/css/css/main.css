@@ -1,0 +1,536 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-style: normal;
+}
+
+.wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+:root {
+  --primary-color: #000000;
+  --white-color: #FFFFFF;
+  --main-color:#6B6B6B;
+}
+
+.footer .footer__row .footer__column-contact .footer__contact-pic, .footer .footer__row .footer__column-contact .footer__contact .footer__contact-content, .footer .footer__row .footer__column-first, .footer .footer__row, .test, .news__body, .news__header, .vacancies__body, .vacancies__header, .vacancies-news, .staff .staff__column .staff__value, .staff .staff__column, .staff, .mission__row .mission__value, .mission__row .mission__column, .mission__row, .about-video .about-video__header, .about, .corporation .corporation__elipse, .header-nav .header-lang, .header-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .footer__row .footer__column-contact .footer__contact, .footer .footer__row .footer__column, .staff .staff__column .staff__item, .mission__row .mission__item, .about-company, .about-video {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-dropdown__link, .header-nav .header-contact, .header-nav .header-link, .header-nav .header-lang__item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--white-color);
+}
+
+.test .test__title, .news__header .news__title, .vacancies__header .vacancies__title, .staff .staff__title, .mission__title, .about-company .about-company__title {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+.footer .footer__text, .footer .footer__row .footer__column .footer__title, .test .test__text, .news__body .news-content__text, .news__body .news-content__item, .news__header .news__link, .vacancies__body .vacancies-content .vacancies-content__text, .vacancies__link, .staff .staff__text, .mission__row .mission__text, .about-company .about-company__text, .about-video .about-video__header .about-video__text, .corporation .corporation__text {
+  font-weight: 400;
+  line-height: 1.51;
+}
+
+.test .test__button, .news__body .news-content__title, .vacancies__body .vacancies-content .vacancies-content__title, .corporation .corporation__title, .test .test__title, .news__header .news__title, .vacancies__header .vacancies__title, .staff .staff__title, .mission__title, .about-company .about-company__title {
+  font-weight: 700;
+  line-height: 1.51;
+}
+
+.footer .footer__row .footer__column-contact .footer__contact .footer-link__contact, .footer .footer__row .footer__column .footer__title, .news__header .news__link, .vacancies__link, .header-nav .header-link, .header-nav .header-lang__item {
+  text-decoration: none;
+}
+
+.test .test__button, .about-company .about-company__button {
+  font-size: 16px;
+  line-height: 1.51;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.header-logo {
+  padding: 21px 0 14px 135px;
+}
+
+.header-nav {
+  background-color: #2B88FF;
+  padding: 0 135px 0 105px;
+  justify-content: space-between;
+}
+.header-nav .header-list {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.header-nav .header-item, .header-nav .header-contact {
+  padding: 12px 30px;
+}
+.header-nav .header-item:hover {
+  background-color: #0C5FC9;
+}
+.header-nav .header-lang {
+  padding: 12px 0 12px 30px;
+}
+.header-nav .header-contact {
+  font-weight: 700;
+}
+
+.header-item {
+  position: relative;
+  display: inline-block;
+}
+
+.header-dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background: #FFFFFF;
+  min-width: 230px;
+  margin-top: 12px;
+  margin-left: -30px;
+}
+
+.header-dropdown__link {
+  color: #6B6B6B;
+  display: block;
+  text-decoration: none;
+  padding: 10px 27px;
+}
+
+.header-dropdown__link:hover {
+  background-color: #2A88FF;
+  color: var(--white-color);
+}
+
+.header-item:hover .header-dropdown {
+  display: block;
+}
+
+.corporation {
+  background: url(/assets/img/brain-source.jpg) no-repeat;
+  background-size: cover;
+  height: 550px;
+}
+.corporation .corporation__title {
+  font-size: 42px;
+  color: var(--white-color);
+  padding: 173px 0 21px 192px;
+}
+.corporation .corporation__text {
+  font-size: 16px;
+  color: var(--white-color);
+  padding: 0 0 205px 192px;
+  max-width: 620px;
+}
+.corporation .corporation__elipse {
+  text-align: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.about {
+  margin-top: 80px;
+  margin-bottom: 150px;
+  gap: 65px;
+}
+
+.about-video {
+  gap: 17px;
+}
+.about-video .about-video__header {
+  gap: 23px;
+}
+.about-video .about-video__header .about-video__text {
+  font-size: 16px;
+  color: #8D8D8D;
+}
+
+.about-company {
+  gap: 30px;
+}
+.about-company .about-company__text {
+  font-size: 16px;
+  color: var(--main-color);
+}
+.about-company .about-company__button {
+  width: 204px;
+  height: 56px;
+  background: var(--white-color);
+  border: 1px solid #EB3D00;
+  color: #EB3D00;
+}
+
+.mission {
+  margin-bottom: 120px;
+}
+
+.mission__title {
+  text-align: center;
+  margin-bottom: 57px;
+}
+
+.mission__row {
+  padding-left: 104px;
+  gap: 60px;
+}
+.mission__row .mission__column {
+  align-items: center;
+  width: 45%;
+}
+.mission__row .mission__column-first {
+  gap: 30px;
+  border-right: 1px solid rgba(0, 0, 0, 0.11);
+}
+.mission__row .mission__column-second {
+  gap: 43px;
+}
+.mission__row .mission__item {
+  gap: 20px;
+}
+.mission__row .mission__value {
+  gap: 11px;
+}
+.mission__row .mission__text {
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.staff {
+  background: #F9F9F9;
+  border: 3px solid #2B88FF;
+  border-radius: 10px;
+  margin-bottom: 77px;
+  align-items: center;
+}
+.staff .staff__title {
+  margin-bottom: 14px;
+}
+.staff .staff__text {
+  font-size: 18px;
+  color: var(--main-color);
+}
+.staff .staff__column {
+  margin-left: 59px;
+  margin-top: 30px;
+  gap: 65px;
+}
+.staff .staff__column .staff__item {
+  gap: 20px;
+}
+.staff .staff__column .staff__value {
+  gap: 11px;
+}
+
+.vacancies-news {
+  justify-content: space-between;
+  margin-bottom: 77px;
+}
+
+.vacancies {
+  width: 48%;
+}
+
+.vacancies__header {
+  margin-bottom: 37px;
+  align-items: center;
+  gap: 389px;
+}
+.vacancies__link {
+  font-size: 14px;
+  color: #EB3D00;
+  border-bottom: 1px dashed #EB3D00;
+}
+
+.vacancies__body {
+  align-items: center;
+  gap: 20px;
+}
+.vacancies__body .vacancies-content {
+  background: var(--white-color);
+  box-shadow: 0px 0px 49px 2px rgba(0, 0, 0, 0.14);
+  border-radius: 0 5px 5px 0;
+  border-left: 3px solid #EB3D00;
+  padding: 41px 34px 32px 30px;
+}
+.vacancies__body .vacancies-content .vacancies-content__title {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 14px;
+}
+.vacancies__body .vacancies-content .vacancies-content__text {
+  font-size: 12px;
+  color: var(--main-color);
+  margin-bottom: 19px;
+}
+
+.news {
+  width: 48%;
+}
+
+.news__header {
+  margin-bottom: 37px;
+  align-items: center;
+  gap: 389px;
+}
+.news__header .news__link {
+  font-size: 14px;
+  color: #EB3D00;
+  border-bottom: 1px dashed #EB3D00;
+}
+
+.news__body {
+  align-items: center;
+  gap: 20px;
+}
+.news__body .news-content__item {
+  font-size: 12px;
+  color: #AAAAAA;
+  margin-bottom: 11px;
+}
+.news__body .news-content__title {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+.news__body .news-content__text {
+  font-size: 12px;
+  color: var(--main-color);
+}
+
+.test {
+  background: #2A88FF;
+  border: 0;
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 62px;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 77px;
+}
+.test .test__title {
+  color: var(--white-color);
+  margin-bottom: 9px;
+}
+.test .test__text {
+  font-size: 18px;
+  color: var(--white-color);
+  text-align: right;
+}
+.test .test__button {
+  color: var(--white-color);
+  width: 237px;
+  height: 56px;
+  background: #EB3D00;
+  border: 1px solid #EB3D00;
+}
+
+.footer {
+  background: #111111;
+  padding: 72px 135px 23px 135px;
+}
+.footer .footer__row {
+  justify-content: space-between;
+}
+.footer .footer__row .footer__column {
+  gap: 15px;
+  width: 17%;
+  padding: 5px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+.footer .footer__row .footer__column .footer__title {
+  font-size: 18px;
+  color: var(--white-color);
+}
+.footer .footer__row .footer__column .footer-item {
+  margin-bottom: 12px;
+}
+.footer .footer__row .footer__column .footer-item .footer-link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: #B3B3B3;
+}
+.footer .footer__row .footer__column-first {
+  gap: 32px;
+}
+.footer .footer__row .footer__column-service {
+  width: 35%;
+}
+.footer .footer__row .footer__column-contact {
+  border: 0;
+}
+.footer .footer__row .footer__column-contact .footer__contact {
+  gap: 15px;
+  margin-bottom: 35px;
+}
+.footer .footer__row .footer__column-contact .footer__contact .footer-link__contact {
+  color: var(--white-color);
+}
+.footer .footer__row .footer__column-contact .footer__contact .footer__contact-content {
+  gap: 15px;
+}
+.footer .footer__row .footer__column-contact .footer__contact-pic {
+  gap: 30px;
+}
+.footer .footer__text {
+  font-size: 14px;
+  color: var(--white-color);
+  text-align: center;
+  margin-top: 65px;
+}
