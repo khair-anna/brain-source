@@ -5,30 +5,65 @@
     margin-bottom: 150px;
     @extend%flex-row;
     gap: 65px;
+    @include breakpoint(xl) {
+        flex-direction: column-reverse;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        gap: 30px;
+    }
+    @include breakpoint(sm) {
+        gap: 15px;
+    }
 }
 .about-video{
     @extend%flex-column;
     gap: 17px;
+    @include breakpoint(xl) {
+        align-items: center;
+    }
     .about-video__header{
         @extend%flex-row;
         gap: 23px;
+        @include breakpoint(sm) {
+            display: none;
+        }
         .about-video__text{
             @extend%fw4;
             font-size: 16px;
             color: #8D8D8D;
         }
     }
+    .about-video__frame{
+        @include breakpoint(sm){
+            width: 350px;
+            height: 220px;
+        }
+    }
 }
 .about-company{
     @extend%flex-column;
     gap: 30px;
+    @include breakpoint(xl) {
+        align-items: center;
+        gap: 10px;
+    }
     .about-company__title{
         @extend%title2;
+        @include breakpoint(sm) {
+            font-size: 20px;
+        }
     }
     .about-company__text{
         @extend%fw4;
         font-size: 16px;
         color: var(--main-color);
+        @include breakpoint(xl){
+            text-align: center;
+            width: 90%;
+        }
+        @include breakpoint(sm) {
+            font-size: 14px;
+        }
     }
     .about-company__button{
         @extend%button;
@@ -37,6 +72,16 @@
         background: var(--white-color);
         border: 1px solid #EB3D00;
         color: #EB3D00;
+        &:hover{
+                background: #EB3D00;
+                color: var(--white-color);
+                font-weight: 700;
+            }
+        @include breakpoint(sm) {
+            font-size: 12px;
+            width: 148px;
+            height: 40px;
+        }
     }
 }
 
@@ -45,27 +90,52 @@
 
 .mission{
     margin-bottom: 120px;
+    @include breakpoint(xl) {
+        margin-bottom: 30px;    
+    }
 }
 .mission__title{
     @extend%title2;
     text-align: center;
     margin-bottom: 57px;
+    @include breakpoint(xl) {
+        margin-bottom: 15px;
+    }
+    @include breakpoint(sm) {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
 }
 .mission__row{
     padding-left: 104px;
     @extend%flex-row;
     gap: 60px;
+    @include breakpoint(xl) {
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
     .mission__column{
         @extend%flex-row;
         align-items: center;
         width: 45%;
+        @include breakpoint(xl) {
+            width: 100%;
+        }
     }
     .mission__column-first{
         gap: 30px;
         border-right: 1px solid rgba(0, 0, 0, 0.11);
+        @include breakpoint(xl) {
+            border: 0; 
+            gap: 15px;   
+        }
     }
     .mission__column-second {
-        gap: 43px;
+        justify-content: space-around;
     }
     .mission__item{
         @extend%flex-column;
@@ -79,6 +149,9 @@
         @extend%fw4;
         font-size: 18px;
         color: var(--main-color);
+        @include breakpoint(sm) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -91,20 +164,42 @@
     border-radius: 10px;
     margin-bottom: 77px;
     align-items: center;
+    @include breakpoint(xl) {
+        margin-bottom: 30px;
+    }
+    .staff__picture{
+        @include breakpoint(lg) {
+            display: none;
+        }
+    }
+    .staff__content{
+        @include breakpoint(lg) {
+            text-align: center;
+        }
+    }
     .staff__title {
         @extend%title2;
         margin-bottom: 14px;
+        @include breakpoint(lg) {
+            margin-top: 10px;
+        }
+        @include breakpoint(sm) {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
     }
     .staff__text {
         @extend%fw4;
         font-size: 18px;
         color: var(--main-color);
+        @include breakpoint(sm) {
+            font-size: 14px;
+        }
     }
     .staff__column {
-        margin-left: 59px;
         margin-top: 30px;
         @extend%flex-row;
-        gap: 65px;
+        justify-content: space-around;
         .staff__item{
             @extend%flex-column;
             gap: 20px;
@@ -123,19 +218,33 @@
     @extend%flex-row;
     justify-content: space-between;
     margin-bottom: 77px;
+    @include breakpoint(xl) {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
 }
 
 //VACANCIES
 .vacancies{
     width: 48%;
+    @include breakpoint(xl) {
+        width: 98%;
+    }
 }
 .vacancies__header {
     @extend%flex-row;
     margin-bottom: 37px;
     align-items: center;
-    gap: 389px;
+    justify-content: space-between;
+    @include breakpoint(xl) {
+        margin-bottom: 15px;
+    }
     .vacancies__title{
         @extend%title2;
+        @include breakpoint(sm) {
+            font-size: 20px;
+        }
     }
 }
 .vacancies__link{
@@ -144,6 +253,9 @@
     font-size: 14px;
     color: #EB3D00;
     border-bottom: 1px dashed #EB3D00;
+    @include breakpoint(sm) {
+        font-size: 12px;
+    }
 }
 
 .vacancies__body {
@@ -156,18 +268,32 @@
         border-radius: 0 5px 5px 0;
         border-left: 3px solid #EB3D00;
         padding: 41px 34px 32px 30px;
+        @include breakpoint(md) {
+            padding: 21px 15px;
+        }
 
         .vacancies-content__title {
             @extend%fw7;
             font-size: 18px;
             color: var(--primary-color);
             margin-bottom: 14px;
+            @include breakpoint(md) {
+                font-size: 16px;
+            }
+            @include breakpoint(sm) {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
         }
         .vacancies-content__text {
             font-size: 12px;
             @extend%fw4;
             color: var(--main-color);
             margin-bottom: 19px;
+            @include breakpoint(sm) {
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
         }
     }
 }
@@ -177,14 +303,23 @@
 
 .news{
     width: 48%;
+    @include breakpoint(xl) {
+        width: 98%;
+    }
 }
 .news__header {
     @extend%flex-row;
     margin-bottom: 37px;
     align-items: center;
-    gap: 389px;
+    justify-content: space-between;
+    @include breakpoint(xl) {
+        margin-bottom: 15px;
+    }
     .news__title {
         @extend%title2;
+        @include breakpoint(sm) {
+            font-size: 20px;
+        }
     }
     .news__link {
         @extend%link;
@@ -192,28 +327,52 @@
         font-size: 14px;
         color: #EB3D00;
         border-bottom: 1px dashed #EB3D00;
+        @include breakpoint(sm) {
+            font-size: 12px;
+        }
     }
 }
 .news__body {
     @extend%flex-row;
     align-items: center;
     gap: 20px;
+    .news-content{
+        @include breakpoint(xl) {
+            width: 49%;
+        }
+    }
     .news-content__item{
         font-size: 12px;
         @extend%fw4;
         color: #AAAAAA;
         margin-bottom: 11px;
+        @include breakpoint(sm) {
+            font-size: 10px;
+            margin-bottom: 0;
+        }
     }
     .news-content__title{
         @extend%fw7;
         font-size: 18px;
         color: var(--primary-color);
         margin-bottom: 12px;
+        @include breakpoint(sm) {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
     }
     .news-content__text{
         font-size: 12px;
         @extend%fw4;
         color: var(--main-color);
+        @include breakpoint(sm) {
+            font-size: 10px;
+        }
+    }
+    .news__picture{
+        @include breakpoint(xl) {
+            width: 100%;
+        }
     }
 }    
 
@@ -231,16 +390,32 @@
     justify-content: center;
     gap: 60px;
     margin-bottom: 77px;
+    @include breakpoint(lg) {
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        gap: 15px;
+        margin-bottom: 35px;
+    }
     .test__title{
         @extend%title2;
         color: var(--white-color);
         margin-bottom: 9px;
+        @include breakpoint(sm) {
+            font-size: 20px;
+        }
     }
     .test__text{
         @extend%fw4;
         font-size: 18px;
         color: var(--white-color);
         text-align:right;
+        @include breakpoint(lg) {
+            text-align: center;
+        }
+        @include breakpoint(sm) {
+            font-size: 14px;
+        }
     }
     .test__button{
         @extend%button;
@@ -250,5 +425,15 @@
         height: 56px;
         background: #EB3D00;
         border: 1px solid #EB3D00;
+        &:hover{
+            background: var(--white-color);
+            border: 1px solid #EB3D00;
+            color: #EB3D00;
+        }
+        @include breakpoint(sm){
+            width: 148px;
+            height: 40px;
+            font-size: 12px;
+        }
     }
 }

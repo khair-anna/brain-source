@@ -1,26 +1,48 @@
 .footer{
     background: #111111;
     padding: 72px 135px 23px 135px;
+    @include breakpoint(xxl){
+        padding: 25px;
+    }
     .footer__row{
         @extend%flex-row;
         justify-content: space-between;
+        @include breakpoint(lg) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
         .footer__column {
             @extend%flex-column;
             gap: 15px;
             width: 17%;
             padding: 5px;
             border-right: 1px solid rgba(255, 255, 255, 0.05);
+            @include breakpoint(lg) {
+                border: 0;
+                width: 100%;
+                gap: 0;
+            }
+            .footer-nav{
+                @include breakpoint(lg) {
+                    display: none;
+                }
+            }
             .footer__title{
                 @extend%link;
                 font-size: 18px;
                 @extend%fw4;
                 color: var(--white-color);
+                @include breakpoint(sm) {
+                    font-size: 14px;
+                }
             }
             .footer-item {
                 margin-bottom: 12px;
                 .footer-link {
                     text-decoration: none;
-                    font-weight: 400;
+                    @extend%fw4;
                     font-size: 14px;
                     color: #B3B3B3;
                 }
@@ -35,13 +57,26 @@
         }
         .footer__column-contact {
             border: 0;
+            @include breakpoint(lg) {
+                align-items: center;
+                text-align: center;
+            }
             .footer__contact {
                 @extend%flex-column;
                 gap: 15px;
                 margin-bottom: 35px;
+                @include breakpoint(lg) {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
                 .footer-link__contact {
                     @extend%link;
+                    @extend%fw4;
+                    font-size: 14px;
                     color: var(--white-color);
+                    @include breakpoint(sm) {
+                        font-size: 11px;
+                    }
                 }
                 .footer__contact-content {
                     @extend%flex-row;
@@ -60,5 +95,11 @@
         color: var(--white-color);
         text-align: center;
         margin-top: 65px;
+        @include breakpoint(xxl) {
+            margin-top: 35px;
+        }
+        @include breakpoint(sm) {
+            font-size: 11px;
+        }
     }
 }

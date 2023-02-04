@@ -46,3 +46,22 @@
     text-align: center;
     border-radius: 5px;
 }
+
+
+@mixin breakpoint($point) {
+    @if $point == xxl {
+        @media(max-width: 1456px){@content;}
+    }
+    @else if $point == xl {
+        @media(max-width: 1200px) {@content;}
+    }
+    @else if $point == lg {
+        @media(max-width: 992px) {@content;}
+    }
+    @else if $point == md {
+        @media(max-width: 768px) {@content;}
+    }
+    @else if $point == sm {
+        @media(max-width: 576px) {@content;}
+    }
+}

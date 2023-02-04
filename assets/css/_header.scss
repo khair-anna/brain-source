@@ -1,5 +1,23 @@
+.header-menu{
+    @extend%flex-row;
+    justify-content: space-between;
+    align-items: center;
+}
 .header-logo{
     padding: 21px 0 14px 135px;
+    @include breakpoint(xl) {
+        padding: 12px 0 12px 50px;
+    }
+    @include breakpoint(sm){
+        padding-left: 10px;
+    }
+}
+.header-burger{
+    display: none;
+    margin-right: 10px;
+    @include breakpoint(xxl) {
+        display: block;
+    }
 }
 
 .header-nav{
@@ -7,6 +25,9 @@
     background-color: #2B88FF;
     padding: 0 135px 0 105px;
     justify-content: space-between;
+    @include breakpoint(xxl) {
+        display: none;
+    }
     .header-list{
         display: flex;
         flex-direction: row;
@@ -67,20 +88,71 @@
     background: url(/assets/img/brain-source.jpg) no-repeat;
     background-size: cover;
     height: 550px;
+    padding: 0 173px;
+    @include breakpoint(xxl) {
+        height: 450px;
+    }
+    @include breakpoint(xl) {
+        height: 365px;
+        padding: 0 50px;
+    }
+    @include breakpoint(lg) {
+        height: 300px;
+    }
+    @include breakpoint(md) {
+        height: 215px;
+    }
+    @include breakpoint(sm) {
+        height: 150px;
+        padding: 0 35px;
+    }
 
     .corporation__title {
         @extend%fw7;
         font-size: 42px;
         color: var(--white-color);
-        padding: 173px 0 21px 192px;
+        padding-top: 173px;
+        margin-bottom: 21px;
+        @include breakpoint(xxl) {
+            padding-top: 80px;
+        }
+        @include breakpoint(lg) {
+            padding-top: 55px;
+            font-size: 32px;
+        }
+        @include breakpoint(md){
+            padding-top: 15px;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        @include breakpoint(sm) {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
     }
 
     .corporation__text {
         @extend%fw4;
         font-size: 16px;
         color: var(--white-color);
-        padding: 0 0 205px 192px;
+        margin-bottom: 205px;
         max-width: 620px;
+        @include breakpoint(xl) {
+            margin-bottom: 150px;
+        }
+        @include breakpoint(lg) {
+            margin-bottom: 130px;
+            font-size: 14px;
+        }
+        @include breakpoint(md){
+            margin-bottom: 80px;
+            font-size: 14px;
+            width: 70%;
+        }
+        @include breakpoint(sm) {
+            margin-bottom: 35px;
+            font-size: 11px;
+        }
     }
 
     .corporation__elipse {
