@@ -24,7 +24,7 @@
     .about-video__header{
         @extend%flex-row;
         gap: 23px;
-        @include breakpoint(sm) {
+        @include breakpoint(xl) {
             display: none;
         }
         .about-video__text{
@@ -38,6 +38,18 @@
             width: 350px;
             height: 220px;
         }
+    }
+}
+.about-video-first{
+    @include breakpoint(xl) {
+        display: none;
+    }
+}
+.about-video-second{
+    display: none;
+    @include breakpoint(xl) {
+        display: block;
+        align-items: center;
     }
 }
 .about-company{
@@ -73,10 +85,10 @@
         border: 1px solid #EB3D00;
         color: #EB3D00;
         &:hover{
-                background: #EB3D00;
-                color: var(--white-color);
-                font-weight: 700;
-            }
+            background: #EB3D00;
+            color: var(--white-color);
+            font-weight: 700;
+        }
         @include breakpoint(sm) {
             font-size: 12px;
             width: 148px;
@@ -91,7 +103,7 @@
 .mission{
     margin-bottom: 120px;
     @include breakpoint(xl) {
-        margin-bottom: 30px;    
+        margin-bottom: 80px;    
     }
 }
 .mission__title{
@@ -164,17 +176,45 @@
     border-radius: 10px;
     margin-bottom: 77px;
     align-items: center;
+    position: relative;
     @include breakpoint(xl) {
         margin-bottom: 30px;
     }
     .staff__picture{
+        width: 100%;
+        height: 427px;
+        @include breakpoint(xl) {
+            height: 310px;
+        }
         @include breakpoint(lg) {
-            display: none;
+            width: 0;
+            height: 360px;
+        }
+        @include breakpoint(sm) {
+            height: 280px;
+        }
+        .staff__picture-item{
+            position: absolute;
+            top: -50px;
+            left: -25px;
+            @include breakpoint(xl) {
+                height: 360px;
+            }
+            @include breakpoint(lg){
+                top: 0;
+                left: 0;
+                opacity: 0.2;
+            }
+            @include breakpoint(sm) {
+                height: 280px;
+            }
         }
     }
     .staff__content{
+        padding: 10px;
         @include breakpoint(lg) {
             text-align: center;
+            margin-left: 0;
         }
     }
     .staff__title {
@@ -250,6 +290,8 @@
 .vacancies__link{
     @extend%link;
     @extend%fw4;
+    margin-top: auto;
+    width: max-content;
     font-size: 14px;
     color: #EB3D00;
     border-bottom: 1px dashed #EB3D00;
@@ -259,10 +301,13 @@
 }
 
 .vacancies__body {
-    @extend%flex-row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0fr;
     align-items: center;
     gap: 20px;
     .vacancies-content {
+        @extend%flex-column;
+        height: 100%;
         background: var(--white-color);
         box-shadow: 0px 0px 49px 2px rgba(0, 0, 0, 0.14);
         border-radius: 0 5px 5px 0;
@@ -297,7 +342,22 @@
         }
     }
 }
-
+.vacancies-news__button-item {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(109, 109, 109, 0.25);
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: none;
+    @include breakpoint(xl) {
+        display: block;
+    }
+    .vacancies-news__button-pic {
+        display: block;
+        margin: 0 auto;
+    }
+}
 
 //NEWS
 

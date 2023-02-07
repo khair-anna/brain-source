@@ -1,0 +1,99 @@
+@import "base";
+@import "function";
+@import "header";
+@import "footer";
+
+.main{
+    @extend%flex-row;
+    margin-top: 21px;
+    margin-bottom: 41px;
+}
+.main__link{
+    @extend%fw4;
+    font-size: 12px;
+    color: #BDBDBD;
+    text-decoration: none;
+}
+.main__text{
+    margin-left: 5px;
+    @extend%fw7;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.news__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.news__header {
+    @extend%flex-row;
+    margin-bottom: 37px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(xl) {
+        margin-bottom: 15px;
+    }
+
+    .news__title {
+        @extend%title2;
+
+        @include breakpoint(sm) {
+            font-size: 20px;
+        }
+    }
+
+}
+
+.news__body {
+    @extend%flex-row;
+    align-items: center;
+    gap: 20px;
+
+    .news-content {
+        @include breakpoint(xl) {
+            width: 49%;
+        }
+    }
+
+    .news-content__item {
+        font-size: 12px;
+        @extend%fw4;
+        color: #AAAAAA;
+        margin-bottom: 11px;
+
+        @include breakpoint(sm) {
+            font-size: 10px;
+            margin-bottom: 0;
+        }
+    }
+
+    .news-content__title {
+        @extend%fw7;
+        font-size: 18px;
+        color: var(--primary-color);
+        margin-bottom: 12px;
+
+        @include breakpoint(sm) {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .news-content__text {
+        font-size: 12px;
+        @extend%fw4;
+        color: var(--main-color);
+
+        @include breakpoint(sm) {
+            font-size: 10px;
+        }
+    }
+
+    .news__picture {
+        @include breakpoint(xl) {
+            width: 100%;
+        }
+    }
+}

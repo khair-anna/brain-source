@@ -157,8 +157,22 @@
 
     .corporation__elipse {
         @extend%flex-row;
-        text-align: center;
+        align-items: center;
         gap: 12px;
         justify-content: center;
+        .corporation__item{
+            border: 2px solid #FFFFFF;
+            background: transparent;
+            border-radius: 50%;
+            padding: 0;
+            width: 10px;
+            height: 10px;
+        }
+        .corporation__item-orange{
+            background: #EB3D00;
+            border: 0;
+            width: 15px;
+            height: 15px;
+        }
     }
 }

@@ -1,12 +1,13 @@
 .footer{
     background: #111111;
-    padding: 72px 135px 23px 135px;
-    @include breakpoint(xxl){
-        padding: 25px;
-    }
     .footer__row{
         @extend%flex-row;
         justify-content: space-between;
+        padding: 72px 135px 44px 135px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        @include breakpoint(xxl) {
+        padding: 25px;
+        }
         @include breakpoint(lg) {
             flex-direction: column;
             align-items: center;
@@ -94,9 +95,10 @@
         @extend%fw4;
         color: var(--white-color);
         text-align: center;
-        margin-top: 65px;
+        margin-top: 28px;
+        padding-bottom: 23px;
         @include breakpoint(xxl) {
-            margin-top: 35px;
+            margin-top: 20px;
         }
         @include breakpoint(sm) {
             font-size: 11px;
