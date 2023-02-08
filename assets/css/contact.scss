@@ -1,0 +1,284 @@
+@import "base";
+@import "function";
+@import "header";
+@import "footer";
+
+.main {
+    @extend%flex-row;
+    margin-top: 21px;
+    margin-bottom: 41px;
+}
+
+.main__link {
+    @extend%fw4;
+    font-size: 12px;
+    color: #BDBDBD;
+    text-decoration: none;
+}
+
+.main__text {
+    margin-left: 5px;
+    @extend%fw7;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+
+.contacts__title {
+    @extend%title2;
+    margin-bottom: 13px;
+    @include breakpoint(xl) {
+        font-size: 24px;
+        margin-bottom: 11px;
+    }
+}
+.contacts__select{
+    margin-bottom: 64px;
+    width: 342px;
+    height: 54px;
+    background: var(--white-color);
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 14px 25px;
+    @extend%fw4;
+    font-size: 18px;
+    color: #3A3A3A;
+    @include breakpoint(xl) {
+        margin-bottom: 21px;
+    }
+}
+
+.contacts__cities{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    color: var(--primary-color);
+    @extend%fw4;
+    margin-bottom: 77px;
+    @include breakpoint(xl) {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 43px;
+    }
+    @include breakpoint(md) {
+        grid-template-columns: 1fr;
+    }
+    .contacts__city{
+        @extend%flex-column;
+        gap: 29px;
+        border-right: 1px solid #EFEFEF;
+        @include breakpoint(xl) {
+            border: 0;
+        }
+        @include breakpoint(md) {
+            gap: 15px;
+        }
+        .contacts__city-header {
+            font-size: 20px;
+            @include breakpoint(sm) {
+                font-size: 18px;
+            }
+        }
+        .contact__city-info {
+            @extend%flex-row;
+            gap: 11px;
+            .contact__city-text {
+                font-size: 16x;
+                @include breakpoint(sm) {
+                    font-size: 12px;
+                }
+            }
+            .contact__fax {
+                font-size: 14px;
+                color: #6B6B6B;
+                @include breakpoint(sm) {
+                    font-size: 10px;
+                }
+            }
+        }
+        .contact__city-fax {
+            @extend%flex-column;
+            .contact__city-text-fax {
+                margin-top: 4px;
+                margin-left: 26px;
+                @include breakpoint(sm) {
+                    font-size: 12px;
+                }
+            }
+        }
+        .contact__city-email {
+            color: var(--blue-color);
+        }
+    }
+    .contacts__city-odesa {
+        border: 0;
+    }
+}
+
+.question{
+    @extend%flex-row;
+    background: #F9F9F9;
+    border: 3px solid var(--blue-color);
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 77px;
+}
+.question__picture{
+    height: 720px;
+    @include breakpoint(xxl){
+        height: 670px;
+    }
+    @include breakpoint(xl) {
+        display: none;
+    }
+    .question__picture-item {
+        height: 100%;
+    }
+}
+.question__title{
+    @extend%fw7;
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 34px;
+    @include breakpoint(lg) {
+        margin-bottom: 20px;
+    }
+    @include breakpoint(sm) {
+        font-size: 18px;
+    }
+}
+.question__items{
+    padding: 20px;
+    @include breakpoint(xl) {
+        margin: 0 auto;
+    }
+}
+.question__form {
+    @extend%flex-column;
+    gap: 34px;
+    @include breakpoint(md) {
+        gap: 20px;
+    }
+    @include breakpoint(sm) {
+        gap: 10px;
+    }
+    .question__form-row{
+        @extend%flex-row;
+        gap: 30px;
+        @include breakpoint(lg) {
+            gap: 20px;
+        }
+        @include breakpoint(md) {
+            flex-direction: column;
+        }
+        @include breakpoint(sm) {
+            gap: 10px;
+        }
+        .question__form-column{
+            @extend%flex-column;
+            gap: 34px;
+            @include breakpoint(md) {
+                gap: 20px;
+            }
+            @include breakpoint(sm) {
+                gap: 10px;
+            }
+        }
+    }
+    .question__input-captcha2 {
+        display: none;
+        @include breakpoint(md) {
+            display: block;
+        }
+    }
+    .question__input-captcha1 {
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+    .question__input {
+        @extend%flex-column;
+        .question__input-item {
+            width: 338px;
+            background: #FFFFFF;
+            border: 1px solid #DDDDDD;
+            border-radius: 5px;
+            padding: 16px 23px;
+            @include breakpoint(sm) {
+                width: 268px;
+                padding: 12px 15px;
+            }
+        }
+        .question__input-message {
+            height: 172px;
+            @include breakpoint(sm){
+                height: 89px;
+            }
+        }
+        .input-invalid {
+            display: none;
+            color: var(--orange-color);
+            @extend%fw4;
+            font-size: 10px;
+            text-align: end;
+        }
+        /*
+        .question__input-item:invalid {
+            border: 1px solid var(--orange-color);
+        }
+        .question__input-item:valid {
+            border: 1px solid #01A011;
+        }
+        */
+        .question__label {
+            @extend%fw4;
+            font-size: 16px;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+            @include breakpoint(sm) {
+                font-size: 12px;
+            }
+        }
+        .label__span {
+            color: var(--orange-color);
+        }
+        .captcha{
+            @extend%flex-row;
+            gap: 20px;
+            .question__captcha {
+                background: #E1E1E1;
+                border-radius: 5px;
+                @extend%fw7;
+                font-size: 24px;
+                color: var(--primary-color);
+                text-align: center;
+                padding: 8px 44px;
+                @include breakpoint(sm) {
+                    font-size: 18px;
+                    padding: 7px 28px;
+                }
+            }
+            .question__captcha-input {
+                width: 175px;
+                height: 54px;
+                @include breakpoint(sm) {
+                    width: 151px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+    .question__button{
+        @extend%button;
+        @extend%fw7;
+        height: 56px;
+        background: var(--orange-color);
+        border: 1px solid var(--orange-color);
+        color: var(--white-color);
+        @include breakpoint(sm) {
+            width: 268px;
+            height: 42px;
+            font-size: 12px;
+        }
+    }
+}
+

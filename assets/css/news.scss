@@ -24,6 +24,13 @@
 .news__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 42px;
+    gap: 52px;
+    @include breakpoint(lg){
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+        gap: 30px;
+    }
 }
 
 .news__header {
@@ -95,5 +102,38 @@
         @include breakpoint(xl) {
             width: 100%;
         }
+    }
+}
+
+.scroll{
+    margin-top: 90px;
+    margin-bottom: 77px;
+    @extend%flex-row;
+    justify-content: center;
+    gap: 5px;
+    @include breakpoint(lg) {
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+    .scroll__button{
+        width: 30px;
+        height: 30px;
+        background: var(--white-color);
+        border: 1px solid #DDDDDD;
+        border-radius: 3px;
+        @extend%fw4;
+        font-size: 16px;
+        text-align: center;
+        color: #6B6B6B;
+        &:hover{
+            border: 0;
+            background: #2A88FF;
+            @extend%fw7;
+            color: var(--white-color);
+        }
+    }
+    .scroll__button-pic{
+        display: block;
+        margin: 0 auto;
     }
 }

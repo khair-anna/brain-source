@@ -1,0 +1,173 @@
+@import "base";
+@import "function";
+@import "header";
+@import "footer";
+
+.main {
+    @extend%flex-row;
+    margin-top: 21px;
+    margin-bottom: 41px;
+}
+
+.main__link {
+    @extend%fw4;
+    font-size: 12px;
+    color: #BDBDBD;
+    text-decoration: none;
+}
+
+.main__text {
+    margin-left: 5px;
+    @extend%fw7;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.vacancies__row{
+    margin-bottom: 41px;
+    @include breakpoint(xl) {
+        margin-bottom: 20px;
+    }
+}
+
+.vacancies__header {
+    @extend%flex-row;
+    margin-bottom: 37px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(xl) {
+        margin-bottom: 15px;
+    }
+
+    .vacancies__title {
+        @extend%title2;
+
+        @include breakpoint(sm) {
+            font-size: 20px;
+        }
+    }
+}
+
+.vacancies__link {
+    @extend%link;
+    @extend%fw4;
+    margin-top: auto;
+    width: max-content;
+    font-size: 14px;
+    color: var(--orange-color);
+    border-bottom: 1px dashed var(--orange-color);
+
+    @include breakpoint(sm) {
+        font-size: 12px;
+    }
+}
+
+.vacancies__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    @include breakpoint(xl) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .vacancies-content {
+        @extend%flex-column;
+        height: 100%;
+        background: var(--white-color);
+        border-radius: 0 5px 5px 0;
+        border-left: 3px solid #EB3D00;
+        padding: 41px 34px 32px 30px;
+        &:hover {
+            box-shadow: 0px 0px 49px 2px rgba(0, 0, 0, 0.14);
+        }
+        @include breakpoint(md) {
+            padding: 21px 15px;
+        }
+
+        .vacancies-content__title {
+            @extend%fw7;
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-bottom: 14px;
+
+            @include breakpoint(md) {
+                font-size: 16px;
+            }
+
+            @include breakpoint(sm) {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .vacancies-content__text {
+            font-size: 12px;
+            @extend%fw4;
+            color: var(--main-color);
+            margin-bottom: 19px;
+
+            @include breakpoint(sm) {
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.vacancies-news__button-item {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(109, 109, 109, 0.25);
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: none;
+
+    @include breakpoint(xl) {
+        display: block;
+    }
+
+    .vacancies-news__button-pic {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.scroll {
+    margin-top: 90px;
+    margin-bottom: 77px;
+    @extend%flex-row;
+    justify-content: center;
+    gap: 5px;
+
+    @include breakpoint(lg) {
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+
+    .scroll__button {
+        width: 30px;
+        height: 30px;
+        background: var(--white-color);
+        border: 1px solid #DDDDDD;
+        border-radius: 3px;
+        @extend%fw4;
+        font-size: 16px;
+        text-align: center;
+        color: #6B6B6B;
+
+        &:hover {
+            border: 0;
+            background: #2A88FF;
+            @extend%fw7;
+            color: var(--white-color);
+        }
+    }
+
+    .scroll__button-pic {
+        display: block;
+        margin: 0 auto;
+    }
+}

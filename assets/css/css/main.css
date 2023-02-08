@@ -163,6 +163,8 @@ body {
   --primary-color: #000000;
   --white-color: #FFFFFF;
   --main-color:#6B6B6B;
+  --orange-color:#EB3D00;
+  --blue-color:#2A88FF;
 }
 
 .footer .footer__row .footer__column-contact .footer__contact-pic, .footer .footer__row .footer__column-contact .footer__contact .footer__contact-content, .footer .footer__row .footer__column-first, .footer .footer__row, .test, .news__body, .news__header, .vacancies__header, .vacancies-news, .staff .staff__column .staff__value, .staff .staff__column, .staff, .mission__row .mission__value, .mission__row .mission__column, .mission__row, .about-video .about-video__header, .about, .corporation .corporation__elipse, .header-nav .header-lang, .header-nav, .header-menu {
@@ -504,11 +506,11 @@ body {
   width: 204px;
   height: 56px;
   background: var(--white-color);
-  border: 1px solid #EB3D00;
-  color: #EB3D00;
+  border: 1px solid var(--orange-color);
+  color: var(--orange-color);
 }
 .about-company .about-company__button:hover {
-  background: #EB3D00;
+  background: var(--orange-color);
   color: var(--white-color);
   font-weight: 700;
 }
@@ -734,12 +736,11 @@ body {
 
 .vacancies__link {
   margin-top: auto;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   font-size: 14px;
-  color: #EB3D00;
-  border-bottom: 1px dashed #EB3D00;
+  color: var(--orange-color);
+  border-bottom: 1px dashed var(--orange-color);
 }
 @media (max-width: 576px) {
   .vacancies__link {
@@ -756,10 +757,12 @@ body {
 .vacancies__body .vacancies-content {
   height: 100%;
   background: var(--white-color);
-  box-shadow: 0px 0px 49px 2px rgba(0, 0, 0, 0.14);
   border-radius: 0 5px 5px 0;
   border-left: 3px solid #EB3D00;
   padding: 41px 34px 32px 30px;
+}
+.vacancies__body .vacancies-content:hover {
+  box-shadow: 0px 0px 49px 2px rgba(0, 0, 0, 0.14);
 }
 @media (max-width: 768px) {
   .vacancies__body .vacancies-content {
@@ -839,8 +842,8 @@ body {
 }
 .news__header .news__link {
   font-size: 14px;
-  color: #EB3D00;
-  border-bottom: 1px dashed #EB3D00;
+  color: var(--orange-color);
+  border-bottom: 1px dashed var(--orange-color);
 }
 @media (max-width: 576px) {
   .news__header .news__link {
@@ -942,13 +945,13 @@ body {
   color: var(--white-color);
   width: 237px;
   height: 56px;
-  background: #EB3D00;
-  border: 1px solid #EB3D00;
+  background: var(--orange-color);
+  border: 1px solid var(--orange-color);
 }
 .test .test__button:hover {
   background: var(--white-color);
-  border: 1px solid #EB3D00;
-  color: #EB3D00;
+  border: 1px solid var(--orange-color);
+  color: var(--orange-color);
 }
 @media (max-width: 576px) {
   .test .test__button {
