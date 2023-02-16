@@ -77,6 +77,7 @@
     }
 
     .news-content__title {
+        text-decoration: none;
         @extend%fw7;
         font-size: 18px;
         color: var(--primary-color);

@@ -165,6 +165,7 @@ body {
   --main-color:#6B6B6B;
   --orange-color:#EB3D00;
   --blue-color:#2A88FF;
+  --text-color:#6B6B6B;
 }
 
 .achievement .achievement__items, .achievement .achievement__header, .main, .footer .footer__row .footer__column-contact .footer__contact-pic, .footer .footer__row .footer__column-contact .footer__contact .footer__contact-content, .footer .footer__row .footer__column-first, .footer .footer__row, .header-nav .header-lang, .header-nav, .header-menu {

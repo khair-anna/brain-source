@@ -1,0 +1,103 @@
+@import "base";
+@import "function";
+@import "header";
+@import "footer";
+
+.main {
+    @extend%flex-row;
+    margin-top: 21px;
+    margin-bottom: 41px;
+}
+
+.main__link {
+    @extend%fw4;
+    font-size: 12px;
+    color: #BDBDBD;
+    text-decoration: none;
+}
+
+.main__text {
+    margin-left: 5px;
+    @extend%fw7;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+  
+.searching {
+    margin-bottom: 66px;
+    @include breakpoint(sm) {
+        margin-bottom: 35px;
+    }
+}
+
+.recruiting__title{
+    @extend%title2;
+    margin-bottom: 13px;
+    @include breakpoint(sm) {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+}
+.recruiting__text{
+    @extend%fw4;
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    @include breakpoint(sm) {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+}
+.recruiting__text-last{
+    margin-top: 10px;
+}
+.recruiting__text-point{
+    @extend%flex-row;
+    gap: 11px;
+    align-items: baseline;
+}
+.circle{ 
+    width: 7px;
+    height: 7px;
+    background: var(--blue-color);
+    border-radius: 50px;     
+}
+
+.recruiting__row{
+    @extend%flex-row;
+    gap: 45px;
+    align-items: center;
+    margin-bottom: 66px;
+    @include breakpoint(xl){
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    @include breakpoint(sm) {
+        margin-bottom: 35px;
+    }
+}
+
+.recruiting__picture{
+    width: 565px;
+    height: 316px;
+    @include breakpoint(md){
+        width: 535px;
+        height: 300px;
+    }
+    @include breakpoint(sm) {
+        width: 350px;
+        height: 220px;
+    }
+}
+.recruiting__title-first {
+    @include breakpoint(xl) {
+        display: none;
+    }
+}
+.recruiting__title-second{
+    display: none;
+    @include breakpoint(xl) {
+        display: block;
+    }
+}
